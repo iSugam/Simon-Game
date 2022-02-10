@@ -4,6 +4,17 @@ var userClickedPattern=[];
 var level=0;
 var start = false;
 
+function restart(){
+  gamePattern =[];
+  userClickedPattern=[];
+  level=0;
+
+  if(start === true) {
+  return  start = false;  
+  }
+
+ }
+
 
 $(document).keypress(function(){
 
@@ -13,12 +24,6 @@ $(document).keypress(function(){
   start = true;
  }
 });
-
-// function restart (){
-
-//     start = true;
-  
-// }
 
 $(".btn").click( function(){
     //Get id from buttos and put in inside (userClickedPattern) Array
@@ -88,10 +93,8 @@ function nextSequence(){
           $("body").removeClass("game-over");
         }, 200);
 
-      startOver();
-      
+      startOver(); 
     }
-
   }
 
  function startOver(){
@@ -99,3 +102,4 @@ function nextSequence(){
   gamePattern=[];
   start = false;
  }
+
