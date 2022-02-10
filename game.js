@@ -4,16 +4,8 @@ var userClickedPattern=[];
 var level=0;
 var start = false;
 
-function restart(){
-  gamePattern =[];
-  userClickedPattern=[];
-  level=0;
 
-  if(start === true) {
-  return  start = false;  
-  }
 
- }
 
 
 $(document).keypress(function(){
@@ -95,6 +87,13 @@ function nextSequence(){
 
       startOver(); 
     }
+  }
+
+  // For Restarting the game
+  function restart(){
+   console.log(startOver()); 
+    $("#level-title").text("Press Any Key on keyboard to Start");
+    
   }
 
  function startOver(){

@@ -77,7 +77,15 @@ button {
 
 #restart {
   background-color: #000000;
-  color: #fff;
+  color: #000;
   cursor: pointer;
   margin-top: 20px;
+  border: none;
+  background-color: #FEF2BF;
+  border-radius: 5px;
+}
+
+p {
+   color: #fff;
+   font-size: 20px;
 }
