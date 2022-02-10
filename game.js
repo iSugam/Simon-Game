@@ -91,7 +91,7 @@ function nextSequence(){
 
   // For Restarting the game
   function restart(){
-   console.log(startOver()); 
+    startOver(); 
     $("#level-title").text("Press Any Key on keyboard to Start");
     
   }
