@@ -5,6 +5,9 @@ var level=0;
 var start = false;
 
 
+
+
+
 $(document).keypress(function(){
 
  if(!start){
@@ -13,12 +16,6 @@ $(document).keypress(function(){
   start = true;
  }
 });
-
-// function restart (){
-
-//     start = true;
-  
-// }
 
 $(".btn").click( function(){
     //Get id from buttos and put in inside (userClickedPattern) Array
@@ -88,10 +85,15 @@ function nextSequence(){
           $("body").removeClass("game-over");
         }, 200);
 
-      startOver();
-      
+      startOver(); 
     }
+  }
 
+  // For Restarting the game
+  function restart(){
+    startOver(); 
+    $("#level-title").text("Press Any Key on keyboard to Start");
+    
   }
 
  function startOver(){
@@ -99,3 +101,4 @@ function nextSequence(){
   gamePattern=[];
   start = false;
  }
+
